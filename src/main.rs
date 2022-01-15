@@ -24,6 +24,15 @@ fn main() {
         println!("Verify: {}", &blockchain.verify());
     }
 
-    blockchain.blocks[3].index = 5;
+    // blockchain.blocks[3].index = 5;
+    // println!("Verify: {}", &blockchain.verify());
+
+    // blockchain.blocks[1].hash[8] +=1 ;
+    // println!("Verify: {}", &blockchain.verify());
+
+    // blockchain.blocks[1].payload = "nope!".to_owned() ;
+    // println!("Verify: {}", &blockchain.verify());
+
+    blockchain.blocks[3].prev_block_hash[18]=  42;
     println!("Verify: {}", &blockchain.verify());
 }
